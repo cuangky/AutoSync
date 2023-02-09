@@ -14,6 +14,11 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
+git clone https://github.com/rufengsuixing/luci-app-zerotier
+git_clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo
+git_clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ && rm -rf modemfeed
+git_clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
+git_clone https://github.com/4IceG/luci-app-modemband modemb  && mv -n modemb/* ./;rm -rf modemb
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-lucky
 #git clone --depth 1 https://github.com/kiddin9/luci-app-dnsfilter
 #git clone --depth 1 https://github.com/yaof2/luci-app-ikoolproxy
@@ -57,6 +62,8 @@ git clone --depth 1 https://github.com/kzer00/luci && mvdir luci
 git clone --depth 1 https://github.com/kzer00/shc
 git clone --depth 1 https://github.com/kenzok8/small && mvdir small
 #svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-ipkg
+svn export https://github.com/gSpotx2f/trunk/luci-app-internet-detector
+svn export https://github.com/gSpotx2f/trunk/internet-detector
 
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
