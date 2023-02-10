@@ -60,7 +60,7 @@ jobs:
         git add . 
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
         git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/cuangky/repo.git" HEAD:${{matrix.target}}    
-        git mv * stb/*
+        git mv * repo/stb/*
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main
       with:
