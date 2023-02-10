@@ -21,6 +21,7 @@ git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{
 git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ && rm -rf modemfeed
 git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
 git clone https://github.com/4IceG/luci-app-modemband modemb  && mv -n modemb/* ./;rm -rf modemb
+git clone https://github.com/derisamedia/luci-theme-alpha
 #git clone --depth 1 https://github.com/sirpdboy/luci-app-lucky
 #git clone --depth 1 https://github.com/kiddin9/luci-app-dnsfilter
 #git clone --depth 1 https://github.com/yaof2/luci-app-ikoolproxy
