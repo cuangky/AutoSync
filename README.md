@@ -28,16 +28,16 @@
  ]( https://web.facebook.com/groups/xderm)
 
 #### Instructions
-Tambahkan custom feeds di Repo masing-masing sesuai architecture Router Masing2
+Tambahkan custom feeds di Repo masing-masing sesuai architecture Router
 ```yaml
 CONTOH:
-
+{aarch64_cortex-a53}
 src/gz custom https://raw.githubusercontent.com/indowrt/indowrt/main/aarch64_cortex-a53
 
-
+{arm_cortex-a7_neon-vfpv4}
 src/gz custom https://raw.githubusercontent.com/indowrt/indowrt/main/arm_cortex-a7_neon-vfpv4
 
-
+{aarch64_cortex-a72}
 src/gz custom https://raw.githubusercontent.com/indowrt/indowrt/main/aarch64_cortex-a72
 
 
