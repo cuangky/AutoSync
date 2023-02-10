@@ -6,7 +6,7 @@ on:
       - '.github/workflows/repo.yml'
       - 'main.sh'  
   schedule:
-    - cron: 0 5 * * *
+    - cron: 0 7 * * *
   repository_dispatch:
   workflow_dispatch:
     inputs:
