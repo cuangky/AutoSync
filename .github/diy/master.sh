@@ -16,6 +16,7 @@ rm -rf $1
 }
 svn export https://github.com/v2rayA/v2raya-openwrt/trunk/v2raya
 git clone https://github.com/rufengsuixing/luci-app-zerotier
+svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
 git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo
 git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ && rm -rf modemfeed
 git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
@@ -65,8 +66,6 @@ git clone --depth 1 https://github.com/kenzok8/small && mvdir small
 #svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-ipkg
 svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
 svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/internet-detector
-svn export https://github.com/kiddin9/openwrt-packages/trunk/luci-app-v2raya
-#svn export https://github.com/kiddin9/openwrt-packages/trunk/v2raya
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?2. Clash For OpenWRT?3. Applications?' \
