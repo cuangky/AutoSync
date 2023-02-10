@@ -1,10 +1,10 @@
-name: repo
+name: openwrt-packages
 
 on:
   push:
     paths:
-      - '.github/workflows/repo.yml'
-      - 'repo.sh'  
+      - '.github/workflows/openwrt-packages.yml'
+      - 'master.sh'  
   schedule:
     - cron: 0 */12 * * *
   repository_dispatch:
@@ -16,15 +16,15 @@ on:
         default: 'false'
 
 jobs:
-  job_repo:
+  job_openwrt-packages:
     if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
     runs-on: ubuntu-latest
 
-    name: Update repo
+    name: Update openwrt-packages
     strategy:
       fail-fast: false
       matrix:
-        target: [repo]
+        target: [master]
         
     steps:
     - name: Checkout
@@ -41,28 +41,31 @@ jobs:
     - name: Clone packages
       run: |
         cd $GITHUB_WORKSPACE
-        chmod +x .github/diy/repo.sh
-        git clone -b repo https://github.com/cuangky/repo.git ${{matrix.target}}
+        chmod +x .github/diy/${{matrix.target}}.sh
+        git clone -b master https://github.com/cuangky/openwrt-packages.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "diy"` >/dev/null 2>&1
-       
+        $GITHUB_WORKSPACE/.github/diy/${{matrix.target}}.sh
+        bash /$GITHUB_WORKSPACE/.github/diy/convert_translation.sh
+        bash /$GITHUB_WORKSPACE/.github/diy/create_acl_for_luci.sh -a
+        bash /$GITHUB_WORKSPACE/.github/diy/Modify.sh
 
     - name: Upload
       env: 
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
-        [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE
-        [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE
-        cd $GITHUB_WORKSPACE
+        [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
+        [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
+        cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
-        git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/cuangky/repo.git"
+        git push --quiet "https://${{ secrets.ACCESS_TOKEN }}@github.com/cuangky/openwrt-packages.git" HEAD:${{matrix.target}}    
         
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main
       with:
         token: ${{ secrets.ACCESS_TOKEN }}
-        repository: cuangky/repo
+        repository: cuangky/openwrt-packages
         retain_days: 1
         keep_minimum_runs: 1
