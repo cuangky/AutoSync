@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [master]
+        target: [repo]
         
     steps:
     - name: Checkout
