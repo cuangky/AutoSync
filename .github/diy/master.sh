@@ -67,8 +67,8 @@ sed -i '$i /etc/init.d/dockerd restart &' luci-app-docker*/root/etc/uci-defaults
 sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
 sed -i 's/\(+luci-compat\)/\1 +luci-theme-argon/' luci-app-argon-config/Makefile
 #sed -i 's/\(+luci-compat\)/\1 +luci-theme-argonne/' luci-app-argonne-config/Makefile
-s#ed -i "s/nas/services/g" `grep nas -rl luci-app-fileassistant`
-s#ed -i "s/NAS/Services/g" `grep NAS -rl luci-app-fileassistant`
+#sed -i "s/nas/services/g" `grep nas -rl luci-app-fileassistant`
+#sed -i "s/NAS/Services/g" `grep NAS -rl luci-app-fileassistant`
 
 rm -rf ./*/.git & rm -rf ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
