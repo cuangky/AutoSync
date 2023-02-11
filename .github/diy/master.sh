@@ -23,13 +23,13 @@ git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
 git clone https://github.com/4IceG/luci-app-modemband modemb  && mv -n modemb/* ./;rm -rf modemb
 git clone https://github.com/derisamedia/luci-theme-alpha
 
-#git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
-#git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
-#git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
+git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
+git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
+git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
 
-#git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
+git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
 
-#git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb
+git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb
 
 #git clone --depth 1 https://github.com/lisaac/luci-app-dockerman dockerman && mv -n dockerman/applications/* ./; rm -rf dockerman
 #git clone --depth 1 -b luci https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
@@ -45,8 +45,8 @@ git clone https://github.com/derisamedia/luci-theme-alpha
 #git clone --depth 1 https://github.com/kzer00/shc
 #git clone --depth 1 https://github.com/kenzok8/small && mvdir small
 
-#svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
-#svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/internet-detector
+svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
+svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/internet-detector
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?2. Clash For OpenWRT?3. Applications?' \
