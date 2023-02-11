@@ -25,7 +25,7 @@ git clone https://github.com/derisamedia/luci-theme-alpha
 
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
-git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
+#git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
 
 git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
 
