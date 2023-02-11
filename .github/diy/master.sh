@@ -25,11 +25,11 @@ git clone https://github.com/derisamedia/luci-theme-alpha
 
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
-#git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
+git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
 
-#git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
+git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
 
-#git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb
+git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb
 
 #git clone --depth 1 https://github.com/lisaac/luci-app-dockerman dockerman && mv -n dockerman/applications/* ./; rm -rf dockerman
 #git clone --depth 1 -b luci https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
