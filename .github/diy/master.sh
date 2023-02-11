@@ -14,39 +14,39 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-svn export https://github.com/v2rayA/v2raya-openwrt/trunk/v2raya
-git clone https://github.com/rufengsuixing/luci-app-zerotier
-svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
-git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo
-git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ && rm -rf modemfeed
-git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
-git clone https://github.com/4IceG/luci-app-modemband modemb  && mv -n modemb/* ./;rm -rf modemb
-git clone https://github.com/derisamedia/luci-theme-alpha
+#svn export https://github.com/v2rayA/v2raya-openwrt/trunk/v2raya
+#git clone https://github.com/rufengsuixing/luci-app-zerotier
+#svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
+#git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo
+#git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ && rm -rf modemfeed
+#git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
+#git clone https://github.com/4IceG/luci-app-modemband modemb  && mv -n modemb/* ./;rm -rf modemb
+#git clone https://github.com/derisamedia/luci-theme-alpha
 
-git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
-git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
+#git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
+#git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
+#git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
 
-git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
+#git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
 
-git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb
+#git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb
 
-git clone --depth 1 https://github.com/lisaac/luci-app-dockerman dockerman && mv -n dockerman/applications/* ./; rm -rf dockerman
-git clone --depth 1 -b luci https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
-git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 passwall2 && mv -n passwall2/luci-app-passwall2 ./;rm -rf passwall2
-git clone --depth 1 https://github.com/ophub/luci-app-amlogic amlogic && mv -n amlogic/luci-app-amlogic ./;rm -rf amlogic
+#git clone --depth 1 https://github.com/lisaac/luci-app-dockerman dockerman && mv -n dockerman/applications/* ./; rm -rf dockerman
+#git clone --depth 1 -b luci https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
+#git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 passwall2 && mv -n passwall2/luci-app-passwall2 ./;rm -rf passwall2
+#git clone --depth 1 https://github.com/ophub/luci-app-amlogic amlogic && mv -n amlogic/luci-app-amlogic ./;rm -rf amlogic
 
-git clone --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./; rm -rf OpenClash
+#git clone --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./; rm -rf OpenClash
 
-git clone --depth 1 https://github.com/fw876/helloworld && mv -n helloworld/luci-app-ssr-plus helloworld/naiveproxy ./ ; rm -rf helloworld
-git clone --depth 1 https://github.com/kenzok8/wall && mv -n wall/alist wall/gost wall/smartdns wall/adguardhome wall/filebrowser wall/lua-neturl wall/sagernet-core wall/tcping wall/redsocks2  wall/microsocks ./ ; rm -rf wall
-git clone --depth 1 https://github.com/immortalwrt/luci && mv -n luci/applications/luci-app-gost luci/applications/luci-app-filebrowser ./ ; rm -rf luci
-git clone --depth 1 https://github.com/kzer00/luci && mvdir luci
-git clone --depth 1 https://github.com/kzer00/shc
-git clone --depth 1 https://github.com/kenzok8/small && mvdir small
+#git clone --depth 1 https://github.com/fw876/helloworld && mv -n helloworld/luci-app-ssr-plus helloworld/naiveproxy ./ ; rm -rf helloworld
+#git clone --depth 1 https://github.com/kenzok8/wall && mv -n wall/alist wall/gost wall/smartdns wall/adguardhome wall/filebrowser wall/lua-neturl wall/sagernet-core wall/tcping wall/redsocks2  wall/microsocks ./ ; rm -rf wall
+#git clone --depth 1 https://github.com/immortalwrt/luci && mv -n luci/applications/luci-app-gost luci/applications/luci-app-filebrowser ./ ; rm -rf luci
+#git clone --depth 1 https://github.com/kzer00/luci && mvdir luci
+#git clone --depth 1 https://github.com/kzer00/shc
+#git clone --depth 1 https://github.com/kenzok8/small && mvdir small
 
-svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
-svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/internet-detector
+#svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
+#svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/internet-detector
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?2. Clash For OpenWRT?3. Applications?' \
