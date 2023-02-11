@@ -6,7 +6,7 @@ on:
       - '.github/workflows/openwrt-packages.yml'
       - 'master.sh'  
   schedule:
-    - cron: 0 */12 * * *
+    - cron: 15 12 * * *
   repository_dispatch:
   workflow_dispatch:
     inputs:
@@ -36,7 +36,7 @@ jobs:
       run : |
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
-        sudo timedatectl set-timezone "Asia/Shanghai"
+        sudo timedatectl set-timezone "Asia/Jakarta"
         
     - name: Clone packages
       run: |
