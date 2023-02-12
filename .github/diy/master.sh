@@ -1,4 +1,6 @@
 #!/bin/bash
+link1="https://github.com/koshev-msk/modemfeed/trunk/packages/net"
+
 function git_sparse_clone() {
 branch="$1" rurl="$2" localdir="$3" && shift 3
 git clone -b $branch --depth 1 --filter=blob:none --sparse $rurl $localdir
@@ -18,8 +20,25 @@ svn export https://github.com/v2rayA/v2raya-openwrt/trunk/v2raya
 git clone https://github.com/rufengsuixing/luci-app-zerotier
 svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
 git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo
-#git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ && rm -rf modemfeed
-svn export https://github.com/koshev-msk/modemfeed/trunk/packages && mvdir packages && rm -r packages/net/dns-proxy
+svn export "$link1"/packages/telephony
+svn export "$link1"/3proxy
+svn export "$link1"/accel-ppp
+svn export "$link1"/cellled
+svn export "$link1"/dns-proxy
+svn export "$link1"/ethstatus
+svn export "$link1"/modeminfo
+svn export "$link1"/mrtg
+svn export "$link1"/nat64
+svn export "$link1"/ndpi-netfilter
+svn export "$link1"/nload
+svn export "$link1"/openvpn-dns-hotplug
+svn export "$link1"/pingcontrol
+svn export "$link1"/rrm-nr-distributor
+svn export "$link1"/simpleproxy
+svn export "$link1"/speedtestpp
+svn export "$link1"/telegrambot
+svn export "$link1"/totd
+svn export "$link1"/xmm-modem
 svn export https://github.com/koshev-msk/modemfeed/trunk/luci/applications && mvdir applications
 git clone https://github.com/4IceG/luci-app-3ginfo-lite
 git clone https://github.com/4IceG/luci-app-3ginfo
@@ -28,30 +47,20 @@ git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
 git clone https://github.com/4IceG/luci-app-modemband modemb  && mv -n modemb/* ./;rm -rf modemb
 git clone https://github.com/derisamedia/luci-theme-alpha
 svn export https://github.com/lynxnexy/packages/trunk/luci-theme-tano
-
-
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
-git clone --depth 1 https://github.com/jerrykuku/luci-app-vssr
-
 git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
-
 git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb
-
 git clone --depth 1 https://github.com/lisaac/luci-app-dockerman dockerman && mv -n dockerman/applications/* ./; rm -rf dockerman
 git clone --depth 1 -b luci https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
 git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 passwall2 && mv -n passwall2/luci-app-passwall2 ./;rm -rf passwall2
 git clone --depth 1 https://github.com/ophub/luci-app-amlogic amlogic && mv -n amlogic/luci-app-amlogic ./;rm -rf amlogic
-
 git clone --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./; rm -rf OpenClash
-
 git clone --depth 1 https://github.com/fw876/helloworld && mv -n helloworld/luci-app-ssr-plus helloworld/naiveproxy ./ ; rm -rf helloworld
 git clone --depth 1 https://github.com/kenzok8/wall && mv -n wall/alist wall/gost wall/smartdns wall/adguardhome wall/filebrowser wall/lua-neturl wall/sagernet-core wall/tcping wall/redsocks2  wall/microsocks ./ ; rm -rf wall
-git clone --depth 1 https://github.com/immortalwrt/luci && mv -n luci/applications/luci-app-gost luci/applications/luci-app-filebrowser ./ ; rm -rf luci
 git clone --depth 1 https://github.com/kzer00/luci && mvdir luci
 git clone --depth 1 https://github.com/kzer00/shc
 git clone --depth 1 https://github.com/kenzok8/small && mvdir small
-
 svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
 svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/internet-detector
 sed -i \
