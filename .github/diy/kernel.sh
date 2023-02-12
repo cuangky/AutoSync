@@ -11,6 +11,7 @@ cd ..
 rm -rf $localdir
 }
 
-curl -s https://api.github.com/repos/kzer00/amlogic-s9xxx-openwrt/releases/latest | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P  pub/stable && cd pub/stable && ls *tar.gz | xargs -n 1 tar -zxvf && rm -r *tar.gz
-svn export  https://github.com/kzer00/k3rnel/trunk/pub/
+
+svn export  https://github.com/kzer00/k3rnel/trunk/pub/stable
+curl -s https://api.github.com/repos/kzer00/amlogic-s9xxx-openwrt/releases/latest | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P  stable && cd pub/stable && ls *tar.gz | xargs -n 1 tar -zxvf && rm -r *tar.gz
 exit 0
