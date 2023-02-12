@@ -24,7 +24,6 @@ svn export https://github.com/koshev-msk/modemfeed/trunk/packages/telephony
 svn export "$link1"/3proxy
 svn export "$link1"/accel-ppp
 svn export "$link1"/cellled
-svn export "$link1"/dns-proxy
 svn export "$link1"/ethstatus
 svn export "$link1"/modeminfo
 svn export "$link1"/mrtg
