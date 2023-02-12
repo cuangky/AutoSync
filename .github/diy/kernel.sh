@@ -10,7 +10,8 @@ mv -n $@ ../
 cd ..
 rm -rf $localdir
 }
-curl -s https://api.github.com/repos/kzer00/amlogic-s9xxx-openwrt/releases/latest | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P kernel && ls *tar.gz | xargs -n 1 tar -zxvf \
+mkdir -p kernel
+curl -s https://api.github.com/repos/kzer00/amlogic-s9xxx-openwrt/releases/latest | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - | ls *tar.gz | xargs -n 1 tar -zxvf/kernel 
 
 
 rm -rf *tar.gz
