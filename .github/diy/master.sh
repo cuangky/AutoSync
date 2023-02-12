@@ -20,7 +20,7 @@ svn export https://github.com/v2rayA/v2raya-openwrt/trunk/v2raya
 git clone https://github.com/rufengsuixing/luci-app-zerotier
 svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
 git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo
-svn export "$link1"/packages/telephony
+svn export https://github.com/koshev-msk/modemfeed/trunk/packages/telephony
 svn export "$link1"/3proxy
 svn export "$link1"/accel-ppp
 svn export "$link1"/cellled
