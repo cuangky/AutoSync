@@ -9,7 +9,7 @@ git sparse-checkout init --cone
 git sparse-checkout set $@
 mv -n $@ ../
 cd ..
-#rm -rf $localdir
+rm -rf $localdir
 }
 megadl "https://mega.nz/folder/gzowSKZY#w3WbxnVMbjuWK6rkh4Volw" --path=pub/stable/4.19.256
 megadl "https://mega.nz/folder/h6QwzbrQ#o6QIn86FlSQi0XOGV8jz3g" --path=pub/stable/5.4.223
