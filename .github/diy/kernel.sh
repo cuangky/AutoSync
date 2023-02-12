@@ -9,7 +9,6 @@ mv -n $@ ../
 cd ..
 rm -rf $localdir
 }
-out=$(curl -s 'https://api.github.com/repos/kzer00/amlogic-s9xxx-openwrt/releases/latest | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P kernel' 2>&1)
-[[ $? -eq 0 && $out ]] && cd kernel && ls *tar.gz | xargs -n 1 tar -zxvf
+curl -s https://api.github.com/repos/kzer00/amlogic-s9xxx-openwrt/releases/latest | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P kernel | && cd kernel && ls *tar.gz | xargs -n 1 tar -zxvf
  
 exit 0
