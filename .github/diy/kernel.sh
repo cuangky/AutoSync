@@ -8,7 +8,7 @@ git sparse-checkout init --cone
 git sparse-checkout set $@
 mv -n $@ ../
 cd ..
-rm -rf $localdir
+#rm -rf $localdir
 }
 
 
