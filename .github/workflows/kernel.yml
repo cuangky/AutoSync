@@ -41,12 +41,7 @@ jobs:
         
     - name: Clone packages
       run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
-        sudo  apt-get -qq update
-        sudo  apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)
-        sudo  apt-get -qq autoremove --purge
-        sudo  apt-get -qq clean
-        sudo timedatectl set-timezone 
+     
         sudo  apt-get install megatools
         cd $GITHUB_WORKSPACE
         chmod +x .github/diy/kernel.sh
