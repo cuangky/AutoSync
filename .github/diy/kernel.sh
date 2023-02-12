@@ -13,7 +13,7 @@ cd ..
 #rm -rf $localdir
 }
 
-svn export https://github.com/lynxnexy/openwrt/trunk/include/kernel && mv -n kernel/" pub/stable/* ./; rm -rf kernel
+svn export https://github.com/lynxnexy/openwrt/trunk/include/kernel && mv -n kernel/* pub/stable/* ./; rm -rf kernel
 #svn export  https://github.com/kzer00/k3rnel/trunk/pub/stable
 #curl -s https://api.github.com/repos/kzer00/amlogic-s9xxx-openwrt/releases/latest | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P  stable && cd stable && ls *tar.gz | xargs -n 1 tar -zxvf && rm -r *tar.gz
 exit 0
