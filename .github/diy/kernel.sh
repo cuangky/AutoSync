@@ -1,5 +1,4 @@
-
-#!/bin/bash
+!/bin/bash
 function git_sparse_clone() {
 branch="$1" rurl="$2" localdir="$3" && shift 3
 curl -s  $branch --depth 1 --filter=blob:none --sparse $rurl $localdir
@@ -10,8 +9,7 @@ mv -n $@ ../
 cd ..
 rm -rf $localdir
 }
-mkdir -p kernel
-curl -s https://api.github.com/repos/kzer00/amlogic-s9xxx-openwrt/releases/latest | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - | ls *tar.gz | xargs -n 1 tar -zxvf
-
+out=$(curl -s 'https://api.github.com/repos/kzer00/amlogic-s9xxx-openwrt/releases/latest | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P kernel' 2>&1)
+[[ $? -eq 0 && $out ]] && cd kernel && ls *tar.gz | xargs -n 1 tar -zxvf
  
 exit 0
