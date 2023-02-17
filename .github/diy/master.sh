@@ -38,6 +38,7 @@ svn export "$link1"/speedtestpp
 svn export "$link1"/telegrambot
 svn export "$link1"/totd
 svn export "$link1"/xmm-modem
+svn export https://github.com/tianiue/luci-app-bypass/trunk/luci-app-bypass
 svn export https://github.com/koshev-msk/modemfeed/trunk/luci/applications && mvdir applications
 git clone https://github.com/4IceG/luci-app-3ginfo-lite
 git clone https://github.com/4IceG/luci-app-3ginfo
