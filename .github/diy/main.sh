@@ -1,6 +1,7 @@
 #!/bin/bash
 NOW="$(date +"%m/%d/%Y")"
-nw="$(date +"%m/%d_%Y_%H/%M")"
+#nw="$(date +"%m/%d_%Y_%H/%M")"
+nw="02/18_2023_06/22"
 function git_sparse_clone() {
 branch="$1" rurl="$2" localdir="$3" && shift 3
 curl -s $branch --depth 1 --filter=blob:none --sparse $rurl $localdir
