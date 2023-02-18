@@ -5,8 +5,8 @@ on:
     paths:
       - '.github/workflows/kernel.yml'
       - 'kernel.sh'
-  schedule:
-    - cron: 30 6 * * *
+  #schedule:
+  #  - cron: 30 6 * * *
   repository_dispatch:
   workflow_dispatch:
     inputs:
