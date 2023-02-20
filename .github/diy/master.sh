@@ -18,6 +18,9 @@ rm -rf $1
 }
 #svn export https://github.com/ofmodemsandmen/ROOterSource2102/trunk/package/rooter/0themes/theme-data
 #svn export https://github.com/ofmodemsandmen/ROOterSource2102/trunk/package/rooter/0themes/luci-theme-tomato
+svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/speedtestcli
+svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-emby
+svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-jellyfin
 svn export https://github.com/immortalwrt/Rclone-OpenWrt/trunk/luci-app-rclone
 svn export https://github.com/v2rayA/v2raya-openwrt/trunk/v2raya
 git clone https://github.com/rufengsuixing/luci-app-zerotier
