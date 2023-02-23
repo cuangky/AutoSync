@@ -12,6 +12,6 @@ cd ..
 rm -rf $localdir
 }
 
-git clone https://github.com/SSHSEDANG4/iptv && mvdir iptv
+git clone https://github.com/SSHSEDANG4/iptv
 
 exit 0
