@@ -3,10 +3,10 @@ name: iptv
 on:
   push:
     paths:
-      - '.github/workflows/kernel.yml'
-      - 'kernel.sh'
-  #schedule:
-  #  - cron: 30 6 * * *
+      - '.github/workflows/iptv.yml'
+      - 'iptv.sh'
+  schedule:
+    - cron: 30 6 * * *
   repository_dispatch:
   workflow_dispatch:
     inputs:
