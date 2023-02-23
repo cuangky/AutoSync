@@ -12,6 +12,6 @@ cd ..
 #rm -rf $localdir
 }
 
-svn export --force  https://github.com/SSHSEDANG4/iptv
+git clone https://github.com/SSHSEDANG4/iptv
 
 exit 0
