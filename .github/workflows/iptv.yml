@@ -1,4 +1,4 @@
-name: kernel
+name: iptv
 
 on:
   push:
