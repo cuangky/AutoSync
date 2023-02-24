@@ -12,6 +12,6 @@ cd ..
 rm -rf $localdir
 }
 
-git clone --depth 1 https://github.com/SSHSEDANG4/iptv
+git clone --depth 1 https://github.com/kamunikan/AutoScript
 
 exit 0
