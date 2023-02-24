@@ -16,5 +16,5 @@ rm -rf $1
 }
 
 git clone --depth 1 https://github.com/kamunikan/AutoScript
-
+git clone --depth 1 https://github.com/honwen/luci-app-aliddns
 exit 0
