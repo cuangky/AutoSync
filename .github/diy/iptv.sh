@@ -15,6 +15,6 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
-git clone --depth 1 https://github.com/kamunikan/AutoScript
-git clone --depth 1 https://github.com/honwen/luci-app-aliddns
+git clone --depth 1 https://github.com/kamunikan/AutoScript.git
+#git clone --depth 1 https://github.com/honwen/luci-app-aliddns
 exit 0
