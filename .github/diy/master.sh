@@ -65,7 +65,7 @@ git clone --depth 1 https://github.com/ophub/luci-app-amlogic amlogic && mv -n a
 git clone --depth 1 https://github.com/vernesong/OpenClash && mv -n OpenClash/luci-app-openclash ./; rm -rf OpenClash
 git clone --depth 1 https://github.com/fw876/helloworld && mv -n helloworld/luci-app-ssr-plus helloworld/naiveproxy ./ ; rm -rf helloworld
 git clone --depth 1 https://github.com/kenzok8/wall && mv -n wall/alist wall/gost wall/smartdns wall/adguardhome wall/filebrowser wall/lua-neturl wall/sagernet-core wall/tcping wall/redsocks2  wall/microsocks ./ ; rm -rf wall
-git clone --depth 1 https://github.com/kzer00/luci && mvdir luci
+git clone --depth 1 https://github.com/helmiau/helmiwrt-packages && mvdir helmiwrt-packages
 git clone --depth 1 https://github.com/kzer00/shc
 git clone --depth 1 https://github.com/kenzok8/small && mvdir small
 svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
