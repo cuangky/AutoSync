@@ -17,7 +17,7 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
-#svn export https://github.com/ofmodemsandmen/ROOterSource2102/trunk/package/rooter/0themes/theme-data
+#svn export https://github.com/kzer00/luci/trunk/luci-theme-neobirdkawe
 #svn export https://github.com/ofmodemsandmen/ROOterSource2102/trunk/package/rooter/0themes/luci-theme-tomato
 svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/speedtestcli
 svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-emby
