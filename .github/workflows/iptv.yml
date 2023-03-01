@@ -1,4 +1,4 @@
-name: script
+name: script-rooter
 
 on:
   push:
