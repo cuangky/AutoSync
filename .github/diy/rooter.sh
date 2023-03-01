@@ -16,7 +16,7 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-svn export https://github.com/ofmodemsandmen/RooterSource/trunk/package/rooter-builds && mv -n rooter-builds/0protocols rooter-builds/ext-huasifel rooter-builds/ext-huasifel16 rooter-builds/ext-rooter-lite rooter-builds/ext-rooter16 rooter-builds/ext-rooter4 rooter-builds/ext-rooter8-vpn rooter-builds/ext-rooterbcm16 ./ ;rm -r rooter-builds 
+svn export --force https://github.com/ofmodemsandmen/RooterSource/trunk/package/rooter-builds && mv -n rooter-builds/0protocols rooter-builds/ext-huasifel rooter-builds/ext-huasifel16 rooter-builds/ext-rooter-lite rooter-builds/ext-rooter16 rooter-builds/ext-rooter4 rooter-builds/ext-rooter8-vpn rooter-builds/ext-rooterbcm16 ./ ; rm -rf rooter-builds 
 
 
 
