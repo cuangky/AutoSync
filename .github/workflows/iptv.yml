@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/iptv.yml'
-      - 'iptv.sh'
+      - 'rooter.sh'
   schedule:
     - cron: 30 6 * * *
   repository_dispatch:
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
      
 
-    name: Update script
+    name: Update script-rooter
     strategy:
       fail-fast: false
       matrix:
@@ -44,12 +44,12 @@ jobs:
      
         sudo  apt-get install megatools
         cd $GITHUB_WORKSPACE
-        chmod +x .github/diy/iptv.sh
-        git clone -b main https://github.com/cuangky/script.git ${{matrix.target}}
+        chmod +x .github/diy/rooter.sh
+        git clone -b main https://github.com/cuangky/rooter.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
         #rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1
-        $GITHUB_WORKSPACE/.github/diy/iptv.sh
+        $GITHUB_WORKSPACE/.github/diy/rooter.sh
         
     - name: Upload
       env: 
@@ -60,7 +60,7 @@ jobs:
         cd $GITHUB_WORKSPACE/${{matrix.target}}
         git add .
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
-        git push --force "https://${{ secrets.ACCESS_TOKEN }}@github.com/cuangky/script.git" HEAD:${{matrix.target}}
+        git push --force "https://${{ secrets.ACCESS_TOKEN }}@github.com/cuangky/rooter.git" HEAD:${{matrix.target}}
 
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main
