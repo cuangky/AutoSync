@@ -4,23 +4,24 @@ on:
   push:
     paths:
       - '.github/workflows/repo-rooter.yml'
-      - 'repo-rooter.sh'  
- # schedule:
- #   - cron: 30 6 * * *
+      - 'repo-rooter.sh'
+  #schedule:
+  #  - cron: 30 6 * * *
   repository_dispatch:
   workflow_dispatch:
     inputs:
       ssh:
-        description: 'SSH Actions'
+        description: 'SSH connection to Actions'
         required: false
         default: 'false'
 
 jobs:
-  job_repo:
+  job_kernel:
     if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
     runs-on: ubuntu-latest
+     
 
-    name: Update repo
+    name: Update repo-rooter
     strategy:
       fail-fast: false
       matrix:
@@ -40,31 +41,29 @@ jobs:
         
     - name: Clone packages
       run: |
+     
+        sudo  apt-get install megatools
         cd $GITHUB_WORKSPACE
         chmod +x .github/diy/repo-rooter.sh
         git clone -b main https://github.com/indowrt/indowrt-rooter.git ${{matrix.target}}
-        #cd indowrt-rooter
+        cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
-        rm -rf `find ./* -maxdepth 0 -type d ! -name "diy"` >/dev/null 2>&1
+        #rm -rf `find ./* -maxdepth 0 -type d ! -name "commit"` >/dev/null 2>&1
         $GITHUB_WORKSPACE/.github/diy/repo-rooter.sh
         
-
     - name: Upload
       env: 
-        INDOWRT_TOKEN: ${{ secrets.INDOWRT_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       run: |
-        #[ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
-        #[ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
-        cd $GITHUB_WORKSPACE/indowrt-rooter
-      
-        git add . 
+       # [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
+       # [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
+        cd $GITHUB_WORKSPACE/${{matrix.target}}
+        git add .
         git commit -am "update $(date +%Y-%m-%d" "%H:%M:%S)"
-        git push -f "https://${{ secrets.INDOWRT_TOKEN }}@github.com/indowrt/indowrt-rooter.git" HEAD:${{matrix.target}}    
-      
+        git push --force "https://${{ secrets.ACCESS_TOKEN }}@github.com/indowrt/indowrt-rooter.git" HEAD:${{matrix.target}}
+
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main
       with:
-        token: ${{ secrets.INDOWRT_TOKEN }}
-        repository: indowrt/indowrt-rooter
-        retain_days: 1
-        keep_minimum_runs: 1
+        retain_days: 5
+        keep_minimum_runs: 1       
