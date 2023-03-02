@@ -43,7 +43,7 @@ jobs:
         cd $GITHUB_WORKSPACE
         chmod +x .github/diy/repo-rooter.sh
         git clone -b main https://github.com/indowrt/indowrt-rooter.git ${{matrix.target}}
-        cd indowrt-rooter
+        #cd indowrt-rooter
         git rm -r --cache * >/dev/null 2>&1 &
         rm -rf `find ./* -maxdepth 0 -type d ! -name "diy"` >/dev/null 2>&1
         $GITHUB_WORKSPACE/.github/diy/repo-rooter.sh
