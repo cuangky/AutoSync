@@ -17,6 +17,13 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter/0basicapps && mvdir 0basicapps
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter/0basicsupport && mvdir 0basicsupport
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter/0drivers && mvdir 0drivers
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter/0optionalapps && mvdir 0optionalapps
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter/0routerspecfic && mvdir 0routerspecfic
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter/0splash && mvdir 0splash
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter/0themes && mvdir 0themes
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter/0wifi && mbdir 0wifi
 svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-builds && mv -n rooter-builds/0protocols rooter-builds/ext-huasifei rooter-builds/ext-huasifei16 rooter-builds/ext-rooter-lite rooter-builds/ext-rooter16 rooter-builds/ext-rooter4 rooter-builds/ext-rooter8-vpn rooter-builds/ext-rooterbcm16 rooter-builds/ext-axt1800 ./ ; rm -rf rooter-builds 
 #svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter && mv -n rooter/0basicapps rooter/0basicsupport rooter/0drivers rooter/0optionalapps rooter/0routerspecfic rooter/0splash rooter/0themes rooter/0wifi rooter/ext-rooter-basic ./ ; rm -rf rooter
 svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/Parts_16 && mv -n Parts_16/ext-custom-level016 Parts_16/ext-custom-level116 Parts_16/ext-custom-level216 Parts_16/ext-custom-level316 Parts_16/ext-custom-level416 Parts_16/ext-custom-level516 ./ ;rm -rf Parts_16
