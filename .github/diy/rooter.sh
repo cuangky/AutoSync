@@ -16,9 +16,20 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-svn export --force https://github.com/ofmodemsandmen/RooterSource/trunk/package/rooter-builds && mv -n rooter-builds/0protocols rooter-builds/ext-huasifei rooter-builds/ext-huasifei16 rooter-builds/ext-rooter-lite rooter-builds/ext-rooter16 rooter-builds/ext-rooter4 rooter-builds/ext-rooter8-vpn rooter-builds/ext-rooterbcm16 ./ ; rm -rf rooter-builds 
-svn export --force https://github.com/ofmodemsandmen/RooterSource/trunk/package/rooter && mv -n rooter/0basicapps rooter/0basicsupport rooter/0drivers rooter/0optionalapps rooter/0routerspecfic rooter/0splash rooter/0themes rooter/0wifi rooter/ext-rooter-basic ./ ; rm -rf rooter
-svn export --force https://github.com/ofmodemsandmen/RooterSource/trunk/package/rooter-extra && mv -n rooter-extra/dawn19 rooter-extra/eoip rooter-extra/ext-simple-gps rooter-extra/luci-app-dawn19 rooter-extra/mesh11sd rooter-extra/speedtestpp ./ ;rm -rf rooter-extra
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-builds && mv -n rooter-builds/0protocols rooter-builds/ext-huasifei rooter-builds/ext-huasifei16 rooter-builds/ext-rooter-lite rooter-builds/ext-rooter16 rooter-builds/ext-rooter4 rooter-builds/ext-rooter8-vpn rooter-builds/ext-rooterbcm16 rooter-builds/ext-axt1800 ./ ; rm -rf rooter-builds 
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter && mv -n rooter/0basicapps rooter/0basicsupport rooter/0drivers rooter/0optionalapps rooter/0routerspecfic rooter/0splash rooter/0themes rooter/0wifi rooter/ext-rooter-basic ./ ; rm -rf rooter
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/Parts_16 && mv -n Parts_16/ext-custom-level016 Parts_16/ext-custom-level116 Parts_16/ext-custom-level216 Parts_16/ext-custom-level316 Parts_16/ext-custom-level416 Parts_16/ext-custom-level516 ./ ;rm -rf Parts_16
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/arc-storage
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/ext-custom-basic
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/ext-custom-level0
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/ext-custom-level1
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/ext-custom-level2
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/ext-custom-level3
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/ext-custom-level4
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/ext-custom-level5
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/ext-mk01k21
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-custom-builds/ext-mk01k2116
+svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/rooter-extra && mv -n rooter-extra/ext-basicmenu rooter-extra/ext-flash rooter-extra/ext-gps rooter-extra/ext-hotspot rooter-extra/ext-l2tp rooter-extra/ext-netselect rooter-extra/ext-remote rooter-extra/ext-repeater rooter-extra/ext-scan rooter-extra/ext-serial rooter-extra/ext-simpin rooter-extra/ext-simplegps rooter-extra/luci-app-vpn-policy-routing rooter-extra/luci-app-vpnbypass rooter-extra/mesh11sd rooter-extra/multi-wifi rooter-extra/netrestart rooter-extra/speedtestpp ./ ; rm -rf rooter-extra
 svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/network/utils/umbim
 svn export --force https://github.com/ofmodemsandmen/ROOterSource2203/trunk/package/network/utils/uqmi
 
