@@ -16,6 +16,7 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
+svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 svn export https://github.com/kzer00/luci/trunk/luci-theme-neobirdkawe
 #svn export https://github.com/ofmodemsandmen/ROOterSource2102/trunk/package/rooter/0themes/luci-theme-tomato
@@ -28,23 +29,24 @@ git clone https://github.com/rufengsuixing/luci-app-zerotier
 svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
 git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo
 svn export https://github.com/koshev-msk/modemfeed/trunk/packages/telephony
-svn export "$link1"/3proxy
-svn export "$link1"/accel-ppp
-svn export "$link1"/cellled
-svn export "$link1"/ethstatus
-svn export "$link1"/modeminfo
-svn export "$link1"/mrtg
-svn export "$link1"/nat64
-svn export "$link1"/ndpi-netfilter
-svn export "$link1"/nload
-svn export "$link1"/openvpn-dns-hotplug
-svn export "$link1"/pingcontrol
-svn export "$link1"/rrm-nr-distributor
-svn export "$link1"/simpleproxy
-svn export "$link1"/speedtestpp
-svn export "$link1"/telegrambot
-svn export "$link1"/totd
-svn export "$link1"/xmm-modem
+#svn export "$link1"/3proxy
+#svn export "$link1"/accel-ppp
+#svn export "$link1"/cellled
+#svn export "$link1"/ethstatus
+#svn export "$link1"/modeminfo
+#svn export "$link1"/mrtg
+#svn export "$link1"/nat64
+#svn export "$link1"/ndpi-netfilter
+#svn export "$link1"/nload
+#svn export "$link1"/openvpn-dns-hotplug
+#svn export "$link1"/pingcontrol
+#svn export "$link1"/rrm-nr-distributor
+#svn export "$link1"/simpleproxy
+#svn export "$link1"/speedtestpp
+#svn export "$link1"/telegrambot
+#svn export "$link1"/totd
+#svn export "$link1"/xmm-modem
+git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ && rm -rf modemfeed
 svn export https://github.com/tianiue/luci-app-bypass/trunk/luci-app-bypass
 svn export https://github.com/koshev-msk/modemfeed/trunk/luci/applications && mvdir applications
 git clone https://github.com/4IceG/luci-app-3ginfo-lite
