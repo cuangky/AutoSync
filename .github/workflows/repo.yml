@@ -40,6 +40,13 @@ jobs:
         
     - name: Clone packages
       run: |
+        sudo rm -rf /usr/share/dotnet
+
+        sudo rm -rf /opt/ghc
+
+        sudo rm -rf "/usr/local/share/boost"
+
+        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         cd $GITHUB_WORKSPACE
         chmod +x .github/diy/main.sh
         git clone -b main https://github.com/indowrt/indowrt.git ${{matrix.target}}
