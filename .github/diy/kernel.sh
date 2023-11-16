@@ -11,7 +11,7 @@ mv -n $@ ../
 cd ..
 #rm -rf $localdir
 }
-mkdir -p script && git clone --depth 1 https://github.com/kamunikan/AutoScript /script
+mkdir -p newkernel && git clone --depth 1 https://github.com/ophub/kernel/releases/download/kernel_stable/5.10.195.tar.gz /newkernel
 #mkdir -p pub/stable/4.19.256 && megadl "https://mega.nz/folder/gzowSKZY#w3WbxnVMbjuWK6rkh4Volw" --path=pub/stable/4.19.256
 #mkdir -p pub/stable/5.4.223 && megadl "https://mega.nz/folder/h6QwzbrQ#o6QIn86FlSQi0XOGV8jz3g" --path=pub/stable/5.4.223
 #mkdir -p pub/stable/5.9.16 && megadl "https://mega.nz/folder/g2In3Aga#8V7arYzBTxH-pJBjlwy96g" --path=pub/stable/5.9.16
