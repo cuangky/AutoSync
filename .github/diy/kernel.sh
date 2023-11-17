@@ -20,5 +20,5 @@ cd ..
 #mkdir -p pub/stable/6.2.0 && megadl "https://mega.nz/folder/ZzIXBbJI#QmpXHOtQ_Jox0CJWWtBzkA" --path=pub/stable/6.2.0
 #svn export --force https://github.com/lynxnexy/openwrt/trunk/include/kernel pub/stable 
 #svn export --force https://github.com/kzer00/k3rnel/trunk/pub/stable pub/stable 
-curl -s https://api.github.com/repos/ophub/kernel/releases/96575239/assets | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P  newkernel/stable  && cd newkernel/stable  && ls *tar.gz | xargs -n 1 tar -zxvf && rm -r *tar.gz
+curl -s https://api.github.com/repos/ophub/kernel/releases/96575239/assets | grep "browser_download_url.*.tar.gz" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P  newkernel/stable
 exit 0
