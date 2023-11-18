@@ -37,11 +37,6 @@ jobs:
       run : |
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "github-actions[bot]"
-        sudo timedatectl set-timezone "Asia/Jakarta"
-        
-    - name: Clone packages
-      run: |
-     
         sudo  apt-get install megatools
         docker rmi `docker images -q`
           [[ -n "${AGENT_TOOLSDIRECTORY}" ]] && sudo rm -rf "${AGENT_TOOLSDIRECTORY}"
@@ -53,8 +48,14 @@ jobs:
           #sudo -E apt-get -y full-upgrade
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
-          sudo timedatectl set-timezone "${TZ}"
+         
           echo "status=success" >> ${GITHUB_OUTPUT}
+        sudo timedatectl set-timezone "Asia/Jakarta"
+        
+    - name: Clone packages
+      run: |
+     
+        
         cd $GITHUB_WORKSPACE
         chmod +x .github/diy/kernel.sh
         git clone -b main https://github.com/cuangky/kernel.git ${{matrix.target}}
