@@ -40,11 +40,15 @@ jobs:
         
     - name: Clone packages
       run: |
-        sudo rm -rf /usr/share/dotnet
-
-        sudo rm -rf /opt/ghc
-
-        sudo rm -rf "/usr/local/share/boost"
+        docker rmi `docker images -q`
+          sudo rm -rf /usr/share/dotnet /etc/apt/sources.list.d /usr/local/lib/android 2>/dev/null
+          sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* adoptopenjdk* mongodb* dotnet* moby* snapd* || true
+          sudo -E apt-get -qq update -y
+          sudo -E apt-get -qq full-upgrade -y
+          sudo -E apt-get -qq install -y $(curl -fsSL https://is.gd/depend_ubuntu2204_openwrt)
+          sudo -E apt-get -qq autoremove --purge
+          sudo -E apt-get -qq clean
+          echo "status=success" >> ${GITHUB_OUTPUT}
 
         sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         cd $GITHUB_WORKSPACE
