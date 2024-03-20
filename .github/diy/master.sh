@@ -1,5 +1,5 @@
 #!/bin/bash
-link1="https://github.com/koshev-msk/modemfeed/trunk/packages/net"
+#link1="https://github.com/koshev-msk/modemfeed/trunk/packages/net"
 
 function git_sparse_clone() {
 branch="$1" rurl="$2" localdir="$3" && shift 3
@@ -17,39 +17,15 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
-#svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
-#svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
-#svn export https://github.com/kzer00/luci/trunk/luci-theme-neobirdkawe
-#svn export https://github.com/ofmodemsandmen/ROOterSource2102/trunk/package/rooter/0themes/luci-theme-tomato
-#svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/speedtestcli
-#svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-emby
-#svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-jellyfin
-#svn export https://github.com/immortalwrt/Rclone-OpenWrt/trunk/luci-app-rclone
-#svn export https://github.com/v2rayA/v2raya-openwrt/trunk/v2raya
+
 git clone https://github.com/rufengsuixing/luci-app-zerotier
 #svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
-git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo
-#svn export https://github.com/koshev-msk/modemfeed/trunk/packages/telephony
-#svn export "$link1"/3proxy
-#svn export "$link1"/accel-ppp
-#svn export "$link1"/cellled
-#svn export "$link1"/ethstatus
-#svn export "$link1"/modeminfo
-#svn export "$link1"/mrtg
-#svn export "$link1"/nat64
-#svn export "$link1"/ndpi-netfilter
-#svn export "$link1"/nload
-#svn export "$link1"/openvpn-dns-hotplug
-#svn export "$link1"/pingcontrol
-#svn export "$link1"/rrm-nr-distributor
-#svn export "$link1"/simpleproxy
-#svn export "$link1"/speedtestpp
-#svn export "$link1"/telegrambot
-#svn export "$link1"/totd
-#svn export "$link1"/xmm-modem
+git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo distributor
+git clone --depth 1 -b main https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
+git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall2 passwall2 && mv -n passwall2/luci-app-passwall2 ./;rm -rf passwall2
+git clone --depth 1 https://github.com/fw876/helloworld && mv -n helloworld/{luci-app-ssr-plus,tuic-client,shadow-tls} ./ ; rm -rf helloworld
+#git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages passwall-packages && mv -n passwall-packages/{sing-box,shadowsocks-rust} ./; rm -rf passwall-packages
 git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ && rm -rf modemfeed
-#svn export https://github.com/tianiue/luci-app-bypass/trunk/luci-app-bypass
-#svn export https://github.com/koshev-msk/modemfeed/trunk/luci/applications && mvdir applications
 git clone https://github.com/4IceG/luci-app-3ginfo-lite
 git clone https://github.com/4IceG/luci-app-lite-watchdog tes && mv tes/* ./ && rm -rf tes
 git clone https://github.com/4IceG/luci-app-3ginfo
