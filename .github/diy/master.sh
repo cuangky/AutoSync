@@ -51,13 +51,13 @@ git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ &&
 svn export https://github.com/tianiue/luci-app-bypass/trunk/luci-app-bypass
 svn export https://github.com/koshev-msk/modemfeed/trunk/luci/applications && mvdir applications
 git clone https://github.com/4IceG/luci-app-3ginfo-lite
-git clone https://github.com/4IceG/luci-app-lite-watchdog && mvdir luci-app-lite-watchdog
+git clone https://github.com/4IceG/luci-app-lite-watchdog luci-app-lite-watchdog && mvdir luci-app-lite-watchdog
 git clone https://github.com/4IceG/luci-app-3ginfo
 git clone https://github.com/4IceG/luci-app-atinout-mod
 git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
 git clone https://github.com/4IceG/luci-app-modemband modemb  && mv -n modemb/* ./;rm -rf modemb
 git clone https://github.com/derisamedia/luci-theme-alpha
-git clone https://github.com/nosignals/luci-app-neko luci-app-neko && mvdir luci-app-neko
+git clone https://github.com/nosignals/luci-app-neko && mvdir luci-app-neko
 svn export https://github.com/lynxnexy/packages/trunk/luci-theme-tano
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
