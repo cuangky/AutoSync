@@ -74,7 +74,7 @@ git clone --depth 1 https://github.com/kzer00/shc
 git clone --depth 1 https://github.com/kenzok8/small && mvdir small
 svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
 svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/internet-detector
-svn export https://github.com/nosignals/luci-app-neko/trunk/luci-app-neko
+svn export https://github.com/nosignals/neko/luci-app-neko/trunk/luci-app-neko
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?2. Clash For OpenWRT?3. Applications?' \
