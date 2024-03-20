@@ -17,19 +17,19 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
-svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
-svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
-svn export https://github.com/kzer00/luci/trunk/luci-theme-neobirdkawe
+#svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
+#svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
+#svn export https://github.com/kzer00/luci/trunk/luci-theme-neobirdkawe
 #svn export https://github.com/ofmodemsandmen/ROOterSource2102/trunk/package/rooter/0themes/luci-theme-tomato
-svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/speedtestcli
-svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-emby
-svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-jellyfin
-svn export https://github.com/immortalwrt/Rclone-OpenWrt/trunk/luci-app-rclone
-svn export https://github.com/v2rayA/v2raya-openwrt/trunk/v2raya
+#svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/speedtestcli
+#svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-emby
+#svn export https://github.com/linkease/openwrt-app-actions/trunk/applications/luci-app-jellyfin
+#svn export https://github.com/immortalwrt/Rclone-OpenWrt/trunk/luci-app-rclone
+#svn export https://github.com/v2rayA/v2raya-openwrt/trunk/v2raya
 git clone https://github.com/rufengsuixing/luci-app-zerotier
-svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
+#svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
 git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo
-svn export https://github.com/koshev-msk/modemfeed/trunk/packages/telephony
+#svn export https://github.com/koshev-msk/modemfeed/trunk/packages/telephony
 #svn export "$link1"/3proxy
 #svn export "$link1"/accel-ppp
 #svn export "$link1"/cellled
@@ -48,8 +48,8 @@ svn export https://github.com/koshev-msk/modemfeed/trunk/packages/telephony
 #svn export "$link1"/totd
 #svn export "$link1"/xmm-modem
 git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ && rm -rf modemfeed
-svn export https://github.com/tianiue/luci-app-bypass/trunk/luci-app-bypass
-svn export https://github.com/koshev-msk/modemfeed/trunk/luci/applications && mvdir applications
+#svn export https://github.com/tianiue/luci-app-bypass/trunk/luci-app-bypass
+#svn export https://github.com/koshev-msk/modemfeed/trunk/luci/applications && mvdir applications
 git clone https://github.com/4IceG/luci-app-3ginfo-lite
 git clone https://github.com/4IceG/luci-app-lite-watchdog tes && mv tes/* ./ && rm -rf tes
 git clone https://github.com/4IceG/luci-app-3ginfo
@@ -57,8 +57,8 @@ git clone https://github.com/4IceG/luci-app-atinout-mod
 git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
 git clone https://github.com/4IceG/luci-app-modemband modemb  && mv -n modemb/* ./;rm -rf modemb
 git clone https://github.com/derisamedia/luci-theme-alpha
-svn export https://github.com/nosignals/neko/branches/luci-app-neko/luci-app-neko
-svn export https://github.com/lynxnexy/packages/trunk/luci-theme-tano
+#svn export https://github.com/nosignals/neko/branches/luci-app-neko/luci-app-neko
+#svn export https://github.com/lynxnexy/packages/trunk/luci-theme-tano
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
