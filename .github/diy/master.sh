@@ -16,6 +16,7 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
+
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 svn export https://github.com/kzer00/luci/trunk/luci-theme-neobirdkawe
@@ -50,6 +51,7 @@ git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ &&
 svn export https://github.com/tianiue/luci-app-bypass/trunk/luci-app-bypass
 svn export https://github.com/koshev-msk/modemfeed/trunk/luci/applications && mvdir applications
 git clone https://github.com/4IceG/luci-app-3ginfo-lite
+git clone https://github.com/4IceG/luci-app-lite-watchdog
 git clone https://github.com/4IceG/luci-app-3ginfo
 git clone https://github.com/4IceG/luci-app-atinout-mod
 git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
@@ -72,6 +74,7 @@ git clone --depth 1 https://github.com/kzer00/shc
 git clone --depth 1 https://github.com/kenzok8/small && mvdir small
 svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/luci-app-internet-detector
 svn export https://github.com/gSpotx2f/luci-app-internet-detector/trunk/internet-detector
+svn export https://github.com/nosignals/luci-app-neko/trunk/luci-app-neko
 sed -i \
 -e 's?include \.\./\.\./\(lang\|devel\)?include $(TOPDIR)/feeds/packages/\1?' \
 -e 's?2. Clash For OpenWRT?3. Applications?' \
