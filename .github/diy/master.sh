@@ -51,7 +51,7 @@ git clone https://github.com/koshev-msk/modemfeed && mv -n modemfeed/*/*/* ./ &&
 svn export https://github.com/tianiue/luci-app-bypass/trunk/luci-app-bypass
 svn export https://github.com/koshev-msk/modemfeed/trunk/luci/applications && mvdir applications
 git clone https://github.com/4IceG/luci-app-3ginfo-lite
-svn export https://github.com/4IceG/luci-app-lite-watchdog/trunk/luci-app-lite-watchdog
+git clone https://github.com/4IceG/luci-app-lite-watchdog tes && mv tes/* ./ && rm -rf tes
 git clone https://github.com/4IceG/luci-app-3ginfo
 git clone https://github.com/4IceG/luci-app-atinout-mod
 git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
