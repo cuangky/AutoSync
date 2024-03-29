@@ -33,6 +33,7 @@ git clone https://github.com/4IceG/luci-app-atinout-mod
 git clone https://github.com/4IceG/luci-app-sms-tool smstool && mvdir smstool
 git clone https://github.com/4IceG/luci-app-modemband modemb  && mv -n modemb/* ./;rm -rf modemb
 git clone https://github.com/derisamedia/luci-theme-alpha
+git clone https://github.com/asvow/luci-app-tailscale
 #svn export https://github.com/nosignals/neko/branches/luci-app-neko/luci-app-neko
 #svn export https://github.com/lynxnexy/packages/trunk/luci-theme-tano
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
