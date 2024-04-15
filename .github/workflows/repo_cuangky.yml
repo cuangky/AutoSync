@@ -75,7 +75,7 @@ jobs:
     - name: Delete workflow runs
       uses: Mattraks/delete-workflow-runs@main
       with:
-        token: ${{ secrets.INDOWRT_TOKEN }}
-        repository: indowrt/indowrt
+        token: ${{ secrets.CUANGKY_TOKEN }}
+        repository: cuangky/indowrt
         retain_days: 1
         keep_minimum_runs: 1
