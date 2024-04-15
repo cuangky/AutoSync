@@ -1,4 +1,5 @@
 #!/bin/bash
+#g-hp_3zHaACeLwsqefMvpyQ6NSW6KxzQISW2copZA
 #NOW="$(date +"%m/%d/%Y")"
 #nw="$(date +"%m/%d_%Y_%H/%M")"
 #nw="02/18_2023_06/22"
@@ -25,13 +26,13 @@ curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/mipsel_24kc | gre
 curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/mips_24kc | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P mips_24kc/
 curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/i386_pentium4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P i386_pentium4/
 curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_xscale | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_xscale/
-#curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a15_neon-vfpv4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a15_neon-vfpv4/
-#curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a9 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a9/
-#curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a9_vfpv3-d16 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a9_vfpv3-d16/
-#curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a7 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a7/
-#curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a7_neon-vfpv4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a7_neon-vfpv4/
-#curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a5_vfpv4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a5_vfpv4/
-#curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_arm1176jzf-s_vfp | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_arm1176jzf-s_vfp/
+curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a15_neon-vfpv4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a15_neon-vfpv4/
+curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a9 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a9/
+curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a9_vfpv3-d16 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a9_vfpv3-d16/
+curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a7 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a7/
+curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a7_neon-vfpv4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a7_neon-vfpv4/
+curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a5_vfpv4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a5_vfpv4/
+curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_arm1176jzf-s_vfp | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_arm1176jzf-s_vfp/
 #curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/aarch64_generic | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P aarch64_generic/
 
 #curl -s https://api.github.com/repos/kzer00/packages-compile/releases/tags/"$nw"_aarch64_cortex-a53 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P oui/aarch64_cortex-a53/
