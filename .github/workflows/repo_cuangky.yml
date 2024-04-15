@@ -3,7 +3,7 @@ name: repo_cuangky
 on:
   push:
     paths:
-      - '.github/workflows/repo.yml'
+      - '.github/workflows/repo_cuangky.yml'
       - 'main.sh'  
  # schedule:
  #   - cron: 30 6 * * *
