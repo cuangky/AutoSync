@@ -17,7 +17,7 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
-
+git clone https://github.com/rtaserver/luci-app-rakitiw
 git clone https://github.com/rufengsuixing/luci-app-zerotier
 #svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
 git clone https://github.com/4IceG/luci-app-3ginfo op3ginfo  && mv -n op3ginfo/{3ginfo,luci-app-3ginfo} ./;rm -rf op3ginfo distributor
