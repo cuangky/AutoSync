@@ -52,7 +52,7 @@ jobs:
 
         sudo rm -rf "$AGENT_TOOLSDIRECTORY"
         cd $GITHUB_WORKSPACE
-        chmod +x .github/diy/main.sh
+        chmod +x .github/diy/IndoWrt.sh
         git clone -b main https://github.com/indowrt/indowrt.git ${{matrix.target}}
         cd ${{matrix.target}}
         git rm -r --cache * >/dev/null 2>&1 &
