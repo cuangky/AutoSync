@@ -38,7 +38,7 @@ git clone https://github.com/asvow/luci-app-tailscale
 #svn export https://github.com/lynxnexy/packages/trunk/luci-theme-tano
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
-git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
+#git clone --depth 1 https://github.com/thinktip/luci-theme-neobird
 git clone --depth 1 https://github.com/jerrykuku/lua-maxminddb
 git clone https://github.com/gSpotx2f/luci-app-internet-detector 1 && mv -n 1/* ./ ;rm -rf 1 screenshots LISENCE README.MD
 #git clone --depth 1 https://github.com/lisaac/luci-app-dockerman dockerman && mv -n dockerman/applications/* ./; rm -rf dockerman
