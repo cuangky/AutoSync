@@ -1,4 +1,4 @@
-name: repo_IndoWrt
+name: repo_IndoWrt 2
 
 on:
   push:
