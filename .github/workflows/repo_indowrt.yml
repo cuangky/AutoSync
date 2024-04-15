@@ -1,10 +1,10 @@
-name: repo
+name: repo_IndoWrt
 
 on:
   push:
     paths:
-      - '.github/workflows/repo.yml'
-      - 'main.sh'  
+      - '.github/workflows/repo_indowrt.yml'
+      - 'IndoWrt.sh'  
  # schedule:
  #   - cron: 30 6 * * *
   repository_dispatch:
