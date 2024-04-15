@@ -30,8 +30,8 @@ curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a9 | g
 curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a9_vfpv3-d16 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a9_vfpv3-d16/
 curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a7 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a7/
 curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a7_neon-vfpv4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a7_neon-vfpv4/
-curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a5_vfpv4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a5_vfpv4/
-curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_arm1176jzf-s_vfp | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_arm1176jzf-s_vfp/
+#curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_cortex-a5_vfpv4 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_cortex-a5_vfpv4/
+#curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/arm_arm1176jzf-s_vfp | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P arm_arm1176jzf-s_vfp/
 curl -s https://api.github.com/repos/cuangky/Zzz/releases/tags/aarch64_generic | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P aarch64_generic/
 
 #curl -s https://api.github.com/repos/kzer00/packages-compile/releases/tags/"$nw"_aarch64_cortex-a53 | grep "browser_download_url.*" | cut -d : -f 2,3 | tr -d \" | wget -qi - -P oui/aarch64_cortex-a53/
