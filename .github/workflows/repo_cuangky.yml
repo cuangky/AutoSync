@@ -1,4 +1,4 @@
-name: repo
+name: repo_cuangky
 
 on:
   push:
