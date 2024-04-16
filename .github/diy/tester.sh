@@ -16,7 +16,7 @@ function mvdir() {
 mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
-
+wget https://codeload.github.com/nosignals/neko/zip/refs/heads/luci-app-neko && unzip luci* && rm -rf luci* && cd neko* && mv -n luci* ../ && cd ../ && rm -rf neko-*
 git clone https://github.com/rtaserver/luci-app-rakitiw
 git clone https://github.com/rufengsuixing/luci-app-zerotier
 #svn export https://github.com/v2rayA/v2raya-openwrt/trunk/luci-app-v2raya
